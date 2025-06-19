@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image to Text | Smart Edit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌞</button>
+    <h1>Image to Text</h1>
+    <div id="drag-drop" onclick="triggerFileInput()">Drag & Drop an image here or click to upload</div>
+    <input type="file" id="upload" accept="image/*" style="display: none;" />
+    <textarea id="output" rows="1" readonly>Your extracted text will appear here...</textarea>
+    <div class="btn-group">
+      <button class="btn" onclick="enableEdit()">✏️ Edit</button>
+      <button class="btn" onclick="copyText()">📋 Copy</button>
+    </div>
+    <span id="copy-msg"></span>
+  </div>
+
+  <!-- Background Video -->
+  <video id="bg-video" autoplay muted loop>
+    <source src="videos/background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay -->
+  <div id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
